@@ -1,5 +1,5 @@
 {
-    "name": "web200/magento-elasticsuite-autocomplete",
+    "name": "luka/magento-elasticsuite-autocomplete",
     "description": "Magento 2 Module to speed autocomplete search",
     "require": {
         "php": "^7.0"
