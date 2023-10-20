@@ -114,7 +114,7 @@ class Product
         $product['title']   = $productData['_source']['name'][0];
         $product['url']     = $this->generateProductUrl($productData);
         $product['sku']     = $this->getFirstResult($productData['_source']['sku']);
-        $product['image']   = $this->generateImageUrl((string)$this->getFirstResult($productData['_source']['image']));
+        $product['image']   = $this->generateImageUrl((string)$this->getFirstResult($productData['_source']['image'] ?? null));
         list($product['regular_price_value'], $product['price_value'], $product['promotion_percentage']) = $this->getPriceValue($productData);
         $product['price']         = $this->getPrice($product, 'price_value');
         $product['regular_price'] = $this->getPrice($product, 'regular_price_value');
